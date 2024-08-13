@@ -10,20 +10,20 @@ public class ContaTerminal {
 
         System.out.print("Digite o número da conta: ");
         int numero = scanner.nextInt();
-        System.out.println("Digite o número da agência: ");
-        int agencia = scanner.nextInt();
-        System.out.println("Digite o nome do titular: ");
+        System.out.print("Digite o número da agência: ");
+        String agencia = scanner.next();
+        System.out.print("Digite o nome do titular: ");
         String titular = scanner.next();
-        System.out.println("Digite o saldo da conta: ");
+        System.out.print("Digite o saldo da conta: ");
         double saldo = scanner.nextDouble();
 
         mostrarInformacoes(numero, agencia, titular, saldo);
 
     }
 
-    public static void mostrarInformacoes(int numero, int agencia, String titular, double saldo) {
-        System.out.println("Olá " + titular + ", obrigado por criar uma conta em nosso banco, " +
-                "sua agência é " + agencia + ", conta " + numero + " e seu saldo" + saldo + " já está disponível para saque.");
+    public static void mostrarInformacoes(int numero, String agencia, String titular, double saldo) {
+        System.out.println("\nOlá " + titular + ", obrigado por criar uma conta em nosso banco, " +
+                "sua agência é " + agencia + ", conta " + numero + " e seu saldo " + saldo + " já está disponível para saque.");
     }
 
 }
